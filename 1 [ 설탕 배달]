@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int sugar;
+	scanf("%d", &sugar);
+
+	int three = 3, five = 5;
+	int bong = 0;
+
+	while (sugar > 0) {
+		if (sugar % 5 != 0) {
+			sugar -= three;
+			bong++;
+		}
+		else if (sugar % 5 == 0) {
+			sugar -= five;
+			bong++;
+		}
+	}
+
+	if (sugar < 0) {
+		printf("-1\n");
+	}
+	else {
+		printf("%d\n", bong);
+	}
+}
